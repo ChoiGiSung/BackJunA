@@ -24,5 +24,9 @@ public class B2217 {
         }
 
         System.out.println(Collections.max(weight));
+
+
+
+
     }
 }

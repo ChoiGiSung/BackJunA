@@ -11,6 +11,8 @@ public class B1541 {
 
         int sum= 0;
 
+
+
         for (int i = 0; i < split.length; i++) {
             int rocalSum=0;
             String[] split1 = split[i].split("\\+");

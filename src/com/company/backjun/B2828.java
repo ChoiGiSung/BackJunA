@@ -1,5 +1,6 @@
 package com.company.backjun;
 
+import java.time.temporal.Temporal;
 import java.util.Scanner;
 
 public class B2828 {
@@ -7,6 +8,7 @@ public class B2828 {
 
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
+
 
 
         int n= sc.nextInt();

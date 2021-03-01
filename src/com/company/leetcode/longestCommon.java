@@ -1,9 +1,12 @@
 package com.company.leetcode;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.stream.Stream;
 
 public class longestCommon {
     public String longestCommonPrefix(String[] strs) {
+
 
         if(strs.length==0){
             return "";

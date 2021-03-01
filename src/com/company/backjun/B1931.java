@@ -18,6 +18,8 @@ public class B1931 {
 
         Collections.sort(moim);
 
+
+
         //정렬은 했으니 이제 돌면서 확인하자
         int count=1;
         int nowTime=moim.get(0).endtTime;
@@ -28,7 +30,17 @@ public class B1931 {
             }
 
         }
-        System.out.println(count);
+
+        Collections.sort(moim, new Comparator<Semena>() {
+            @Override
+            public int compare(Semena o1, Semena o2) {
+                return 0;
+            }
+        });
+
+        for (Semena semena : moim) {
+            System.out.println(semena.endtTime);
+        }
 
     }
 
@@ -43,10 +55,7 @@ public class B1931 {
 
         @Override
         public int compareTo(Semena o) {
-            if (o.endtTime == endtTime){
-                return startTime-o.startTime;
-            }
-            return endtTime-o.endtTime;
+            return 0;
         }
     }
 }
