@@ -1,6 +1,6 @@
 package com.company.backjun;
 
-public class BasicSort {
+public class BubbleSort {
 
     public static void main(String[] args) {
         int[] array = {9, 8, 1, 3, 2};
