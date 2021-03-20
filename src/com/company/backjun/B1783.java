@@ -6,40 +6,19 @@ public class B1783 {
 
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
-        Pawn pawn=new Pawn();
-        int count=1;
 
-        int move[][]={{2,1},{-2,1},{1,2},{-1,2}};
+        int n = sc.nextInt();
+        int m = sc.nextInt();
 
-        String[] split = sc.nextLine().split(" ");
-        int N= Integer.parseInt(split[0]);
-        int M= Integer.parseInt(split[1]);
-
-        while (pawn.flag){
-
-            int nowCount=count;
-            for (int[] ints : move) {
-                if(pawn.height+ints[0] <= N && pawn.height+ints[0] > 0 && pawn.width+ints[1] <= M){
-                    pawn.add(ints[0],ints[1]);
-                    count++;
-                }
-            }
-            if (nowCount == count){
-                System.out.println(count);
-                return;
-            }
+        if(n == 1 ){
+            System.out.println(1);
+        }else if(n == 2){
+            System.out.println(Math.min(4,(m+1)/2));
+        }else if (m < 7){
+            System.out.println(Math.max(4,m));
+        }else{
+            System.out.println(m-2);
         }
     }
 
-    static class Pawn{
-        int height=1;
-        int width=1;
-        boolean flag=true;
-
-        public void add(int height,int width){
-            this.height+=height;
-            this.width+=width;
-        }
-
-    }
 }
