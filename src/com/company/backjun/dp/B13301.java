@@ -17,8 +17,8 @@ public class B13301 {
         dp.add(6L);
 
         for (int i = 2; i <= all; i++) {
-            dp.add(dp.get(i-1)+dp.get(i-2));
+            dp.add(dp.get(i - 1) + dp.get(i - 2));
         }
-        System.out.println(dp.get(all-1));
+        System.out.println(dp.get(all - 1));
     }
 }

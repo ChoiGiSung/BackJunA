@@ -17,7 +17,7 @@ public class B2748 {
         dp.add(1L);
 
         for (int i = 2; i <= all; i++) {
-            dp.add(dp.get(i-1)+dp.get(i-2));
+            dp.add(dp.get(i - 1) + dp.get(i - 2));
         }
         System.out.println(dp.get(all));
     }

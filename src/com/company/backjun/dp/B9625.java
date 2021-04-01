@@ -21,9 +21,9 @@ public class B9625 {
         bDp.add(1L);
 
         for (int i = 2; i <= all; i++) {
-            aDp.add(aDp.get(i-1)+aDp.get(i-2));
-            bDp.add(bDp.get(i-1)+bDp.get(i-2));
+            aDp.add(aDp.get(i - 1) + aDp.get(i - 2));
+            bDp.add(bDp.get(i - 1) + bDp.get(i - 2));
         }
-        System.out.println(aDp.get(all)+" "+bDp.get(all));
+        System.out.println(aDp.get(all) + " " + bDp.get(all));
     }
 }
