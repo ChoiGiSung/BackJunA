@@ -5,7 +5,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
 
-public class ChessColor {
+public class B1018 {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
