@@ -1,10 +1,8 @@
 package com.company.backjun.sort;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
-public class B2750 {
+public class B2750SelectionSort {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -17,22 +15,21 @@ public class B2750 {
             array[i] = sc.nextInt();
         }
 
-        for (int i = 1; i < array.length ; i++) {
-            for (int j = i-1; j >= 0; j--) {
-                if (array[j+1] < array[j]) {
-                    int temp = array[j+1];
-                    array[j+1] = array[j];
-                    array[j] = temp;
-                }else {
-                    break;
+
+        for(int i = 0; i < all; i++){
+            int minIndex = i;
+            for (int j = i; j < all; j++) {
+                if(array[minIndex] > array[j]){
+                    minIndex = j;
                 }
             }
+            int temp = array[i];
+            array[i] = array[minIndex];
+            array[minIndex] = temp;
         }
-
 
         for (int i : array) {
             System.out.println(i);
         }
-
     }
 }
