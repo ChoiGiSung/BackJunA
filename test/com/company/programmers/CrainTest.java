@@ -1,9 +1,11 @@
 package com.company.programmers;
 
+import com.company.programmers.normal.Crain;
+import com.company.programmers.normal.KNumber;
+import com.company.programmers.normal.PracticeTest;
+import com.company.programmers.normal.StrangeWord;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class CrainTest {
 

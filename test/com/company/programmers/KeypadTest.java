@@ -1,9 +1,8 @@
 package com.company.programmers;
 
+import com.company.programmers.normal.Keypad;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class KeypadTest {
 
