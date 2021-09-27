@@ -46,13 +46,13 @@ public class Main {
 
     }
 
-    private static String getFQNC(String Input) {
-        return switch (Input){
-            case "sample1" ->GetFQNC2.SAMPLE1.getFQNC();
-            case "sample2" ->GetFQNC2.SAMPLE2.getFQNC();
-            default -> throw new IllegalStateException("Unexpected value: " + Input);
-        };
-    }
+//    private static String getFQNC(String Input) {
+//        return switch (Input){
+//            case "sample1" ->GetFQNC2.SAMPLE1.getFQNC();
+//            case "sample2" ->GetFQNC2.SAMPLE2.getFQNC();
+//            default -> throw new IllegalStateException("Unexpected value: " + Input);
+//        };
+//    }
 
     private static String getMessage(int id, String name, int age){
         //String result="당신의 id는"+id+"당신의 이름은 : "+name+"당신의 나이는 "+age;
