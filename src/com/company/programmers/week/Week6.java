@@ -91,29 +91,17 @@ public class Week6 {
             public int compareTo(Node o) {
                 double winingRate = this.getWiningRate();
                 double winingRate1 = o.getWiningRate();
-                if(this.getWiningRate() > o.getWiningRate()){
-                    return -1;
-                }else if(this.getWiningRate() < o.getWiningRate()){
-                    return 1;
-                }else {
-                    if (this.heavyWin > o.heavyWin){
-                        return -1;
-                    }else if(this.heavyWin < o.heavyWin){
-                        return 1;
-                    }else {
-                        if (this.weight > o.weight){
-                            return -1;
-                        }else if(this.weight < o.weight){
-                            return 1;
-                        }else {
-                            if (this.index < o.index){
-                                return -1;
-                            }else {
-                                return 1;
-                            }
+                if(this.getWiningRate() == o.getWiningRate()){
+                    if(this.heavyWin == o.heavyWin){
+                        if(this.weight == o.weight){
+                            return Integer.compare(this.index,o.index);
                         }
+                        return Integer.compare(o.weight,this.weight);
                     }
+                    return Integer.compare(o.heavyWin,this.heavyWin);
                 }
+                return Double.compare(o.getWiningRate(),this.getWiningRate());
+
             }
         }
     }
