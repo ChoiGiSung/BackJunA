@@ -2,39 +2,46 @@ package com.company.programmers.runing;
 
 import org.junit.jupiter.api.Test;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.List;
+import java.util.Arrays;
 
 public class BinarySearch {
 
     @Test
     void test(){
         Solution solution = new Solution();
-        String solution1 = solution.solution(new int[]{3, 30, 34, 5, 9});
-        System.out.println(solution1);
+        solution.solution(new int[]{120, 110, 140, 150},485);
     }
 
     class Solution {
-        public String solution(int[] numbers) {
-            String answer = "";
-            List<String> list = new ArrayList<>();
+        public int solution(int[] budgets, int M) {
+            int answer = 0;
+            Arrays.sort(budgets);
+            int max = budgets[budgets.length-1];
+            int min = 0;
 
-            for (int number : numbers) {
-                list.add(number+"");
-            }
+            while (min < max){
+                int mid = (min+max)/2;
+                int sum = 0;
+                for (int budget : budgets) {
+                    if(budget > mid){
+                        sum+=mid;
+                    }else {
+                        sum+=budget;
+                    }
 
-            Collections.sort(list, new Comparator<String>() {
-                @Override
-                public int compare(String o1, String o2) {
-                    return (o2 + o1).compareTo(o1 + o2);
+
                 }
-            });
-            for (String s : list) {
-                answer+=s;
+
+                if(sum <= M){
+                    min = mid+1;
+                    answer = mid;
+                }else {
+                    max = mid-1;
+                }
             }
+
             return answer;
         }
     }
+
 }
