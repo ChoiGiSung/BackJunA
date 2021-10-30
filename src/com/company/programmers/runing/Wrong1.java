@@ -4,7 +4,6 @@ import java.util.Arrays;
 import java.util.Comparator;
 
 public class Wrong1 {
-    import java.util.*;
 
     class Solution {
         public String solution(int[] numbers) {
