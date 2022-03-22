@@ -6,7 +6,7 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.PriorityQueue;
 
-public class TestSample2 {
+public class Test신고결과받기 {
 
     @Test
     void test(){
